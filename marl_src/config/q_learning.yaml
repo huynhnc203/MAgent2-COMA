@@ -1,0 +1,26 @@
+cfg:
+  num_entities: 81
+  episodes: 1500
+  buffer_capacity: 100000
+  batch_size: 64
+  device: "cpu"  # Replace with "cpu" if needed
+  num_actions: 21
+  lr: 0.001
+
+params:
+  gamma: 0.99
+  theta_decay: 0.01
+  epsilon: 1e-8
+  tau: 0.005
+  target_update_frequency: 1000
+  training_frequency: 100
+  min_exploration: 0.3
+  max_exploration: 0.7
+  save_frequency: 10
+
+env:
+  max_cycles: 1000
+  step_reward: -0.005
+  dead_penalty: -0.5
+  attack_penalty: -0.1
+  attack_opponent_reward: 0.2

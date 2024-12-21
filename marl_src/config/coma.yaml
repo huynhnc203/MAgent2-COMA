@@ -1,0 +1,37 @@
+args:
+  n_agents: 81
+  n_actions: 21
+  buffer_size: 40
+  num_actions: 21
+  lr: 0.001
+  seq_len: 300
+  batch_size: 10
+  gamma: 0.69
+  theta_decay: 0.01
+  epsilon: 1e-8
+  tau: 0.005
+  target_update_frequency: 200
+  training_frequency: 100
+  min_exploration: 0.3
+  max_exploration: 0.7
+  save_frequency: 10
+  rnn_hidden_dim: 512
+  obs_dim: 845
+  state_dim: 10125
+  lambda_entropy: 0.01
+  hidden_dim: 512
+  end_game_reward: 100
+
+training_cfg:
+  device: "cpu"
+  episodes: 500
+
+env:
+  max_cycles: 300
+  step_reward: 0.01
+  dead_penalty: -0.5
+  attack_penalty: -0.1
+  attack_opponent_reward: 2
+
+model: "coma"
+
